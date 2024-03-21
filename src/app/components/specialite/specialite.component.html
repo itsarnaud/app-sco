@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Liste des spécialités</h2>
+  <div class="img">
+   <img src="../../../assets/specialite.jpeg" alt="spécialité">
+  </div>
+  <table class="greyGridTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Libelle</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr *ngFor="let spe of specialites">
+        <td>{{ spe._idSpec }}</td>
+        <td>{{ spe._libelle }}</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+

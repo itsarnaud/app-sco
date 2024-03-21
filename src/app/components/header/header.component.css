@@ -1,0 +1,24 @@
+nav, .nav-elt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  padding: 30px 40px;
+}
+
+.nav-elt {
+  gap: 20px;
+}
+
+li {
+  cursor: pointer;
+  color: #616161;
+  transition: .5s;
+
+  &:hover {
+    color: black;
+  }
+}

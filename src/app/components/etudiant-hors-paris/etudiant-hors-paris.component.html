@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Liste des étudiants (hors Paris)</h2>
+  <div class="img">
+   <img src="../../../assets/horsparis.jpg" alt="hors-paris">
+  </div>
+  <table class="greyGridTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Âge</th>
+        <th>Genre</th>
+        <th>Rue</th>
+        <th>Code Postal</th>
+        <th>Ville</th>
+        <th>Courriel</th>
+      </tr>
+    </thead>
+      <tbody *ngFor="let etudiant of etudiants">
+      <tr *ngIf="etudiant._ville !== 'Paris'">
+          <td>{{ etudiant._idCand }}</td>
+          <td>{{ etudiant._nom }}</td>
+          <td>{{ etudiant._prenom }}</td>
+          <td>{{ etudiant._age }}</td>
+          <td>{{ etudiant._genre }}</td>
+          <td>{{ etudiant._rue }}</td>
+          <td>{{ etudiant._cp }}</td>
+          <td>{{ etudiant._ville }}</td>
+          <td>{{ etudiant._courriel }}</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
