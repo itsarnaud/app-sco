@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { EtudiantServiceService } from '../../services/etudiant-service.service';
+
 
 @Component({
   selector: 'app-form-add-etudiant',
@@ -23,7 +23,26 @@ export class FormAddEtudiantComponent implements OnInit {
       })
   }
 
-  login() {
+  onSubmit(): void {
+    localStorage.setItem('etuForm', JSON.stringify(this.etuForm.value));
+    this.etuForm.controls['id'].setValue("");
+    this.etuForm.controls['prenom'].setValue("");
+    this.etuForm.controls['nom'].setValue("");
+    this.etuForm.controls['cp'].setValue("");
+    this.etuForm.controls['ville'].setValue("");
+    this.etuForm.controls['courriel'].setValue("");
+    this.etuForm.controls['genre'].setValue("");
+    this.etuForm.controls['age'].setValue("");
+  }
 
+  clear(): void {
+    this.etuForm.controls['id'].setValue("");
+    this.etuForm.controls['prenom'].setValue("");
+    this.etuForm.controls['nom'].setValue("");
+    this.etuForm.controls['cp'].setValue("");
+    this.etuForm.controls['ville'].setValue("");
+    this.etuForm.controls['courriel'].setValue("");
+    this.etuForm.controls['genre'].setValue("");
+    this.etuForm.controls['age'].setValue("");
   }
 }
